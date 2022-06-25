@@ -1,0 +1,64 @@
+@keyframes slide {
+    0%, 17%, 100% {
+        transform: translateY(0);
+    }
+    20%, 37% {
+        transform: translateY(-80vh);
+    }
+    40%, 57% {
+        transform: translateY(-160vh);
+    }
+    60%, 77% {
+        transform: translateY(-240vh);
+    }
+    80%, 97% {
+        transform: translateY(-320vh);
+    }
+} 
+body {
+    margin: 0%;
+    font-family: sans-serif;
+    background-color: rgb(36, 41, 74);
+    color: #ddd;
+    text-align: center;
+}
+p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background: rgb(0, 0, 0, .5);
+    width: 90vh;    
+    margin: 20px auto;
+    padding: 15px;
+    display: block;
+}
+p:hover {
+    color: #49bf9d;
+    transition: color .5s linear;
+}
+.externo {
+    
+    border: 10px solid white;
+    width: 100vh;
+    height: 80vh;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 0 10px black;
+}
+.externo:hover {
+    border: 10px solid rgb(77, 70, 70);
+    transition: border .9s linear;
+}
+.interno {
+    animation: slide 20s infinite cubic-bezier(1,-0.66,.07,1.66);
+    width: 100%;
+    display: block;
+}
+.interno:hover {
+    animation-play-state: paused;
+    
+}
+.interno img {
+    height: 79vh;
+    width: 100%;
+}
